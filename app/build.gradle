@@ -23,7 +23,13 @@ android {
             dimension "mode"
             applicationId "com.example.subramanyam.multipleapk.app.phone"
             versionName "1.0-phone"
-
+            splits {
+                density {
+                    enable true
+                    reset()
+                    include "mdpi", "hdpi"
+                }
+            }
         }
         tablet {
             dimension "mode"
